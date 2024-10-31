@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Generator
+
+<form method="post">
+	<div class="border p-3 mt-4 bg-gradient">
+		<div class="row pb-2">
+			<h3>
+				Adding contact
+			</h3>
+			<hr />
+		</div>
+
+		<div>
+			<div class="row m-2">
+				<label asp-for="PlayerCount" class=""></label>
+				<input asp-for="PlayerCount" type="number" class="form-control" />
+				<span asp-validation-for="PlayerCount" class="text-danger"></span>
+			</div>
+
+			<div class="row m-2">
+				<label asp-for="LevelCount" class=""></label>
+				<input asp-for="LevelCount" type="number" class="form-control" />
+				<span asp-validation-for="LevelCount" class="text-danger"></span>
+			</div>
+
+			<div class="row m-2">
+				<label asp-for="CharacterCount" class=""></label>
+				<input asp-for="CharacterCount" type="number" class="form-control" />
+				<span asp-validation-for="CharacterCount" class="text-danger"></span>
+			</div>
+
+			<div class="row m-2">
+				<label asp-for="ItemCount" class=""></label>
+				<input asp-for="ItemCount" type="number" class="form-control" />
+				<span asp-validation-for="ItemCount" class="text-danger"></span>
+			</div>
+
+			<div class="row m-2">
+				<label asp-for="CharityFundCount" class=""></label>
+				<input asp-for="CharityFundCount" type="number" class="form-control" />
+				<span asp-validation-for="CharityFundCount" class="text-danger"></span>
+			</div>
+
+			<div class="row m-2">
+				<label asp-for="TransactionCount" class=""></label>
+				<input asp-for="TransactionCount" type="number" class="form-control" />
+				<span asp-validation-for="TransactionCount" class="text-danger"></span>
+			</div>
+
+			<div class="row mx-auto">
+				<div class="col-6 mx-auto">
+					<button type="submit" class="btn btn-primary m-1 mt-2 form-control">Create</button>
+				</div>
+				<div class="col-6 mx-auto">
+					<a asp-controller="Home" asp-action="Index" class="btn btn-secondary m-1 mt-2 form-control"><i class="bi bi-arrow-return-left"></i>Back to Contact List</a>
+				</div>
+			</div>
+
+		</div>
+</form>
